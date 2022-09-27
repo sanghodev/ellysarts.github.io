@@ -1,7 +1,6 @@
 
-
-		
-						<div class="inner">
+let sidebar = `
+    <div class="inner">
 
 							<!-- Search -->
 								<section id="search" class="alt">
@@ -92,5 +91,12 @@
 								<footer id="footer">
 									<p class="copyright">&copy; Elly's Art & Craft. All rights reserved. <a href="http://ellysp.com">Elly's Place</a>.</p>
 								</footer>
+`;
+document.getElementById("sidebar").innerHTML = sidebar;
+
+
+
+		
+						
 
 					
