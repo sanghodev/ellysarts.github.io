@@ -1974,7 +1974,7 @@ button,
     white-space: nowrap;
     top: 0;
     width: 6em;
-    z-index: 10000; }
+    z-index: 1; }
     #sidebar .toggle:before {
       -moz-osx-font-smoothing: grayscale;
       -webkit-font-smoothing: antialiased;

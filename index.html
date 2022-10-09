@@ -42,7 +42,7 @@
 										</header>
 										<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. Pellentesque sapien ac quam. Lorem ipsum dolor sit nullam.</p>
 										<ul class="actions">
-											<li><a href="#" class="button big">Make a Schedule</a></li>
+											<li><a href="#ex1" rel="modal:open" class="button big">Make a Schedule</a></li>
 										</ul>
 										<p>After School Kid Creative Art Class</p>
 									</div>
@@ -166,6 +166,20 @@
 
 								</section>
 
+								<section>
+									<!-- Modal HTML embedded directly into document -->
+									<div id="ex1" class="modal" style="max-width: 90%; height: 95%;">
+										<iframe src="https://www.waitwhile.com/book/ellysartcraft" allowtransparency="true" frameborder="0" scrolling="no" width="100%" height="700px"></iframe>
+										<!-- <a href="#" rel="modal:close">Close</a> -->
+									</div>
+									
+									<!-- Link to open the modal -->
+									<p><a href="#ex1" rel="modal:open">Open Modal</a></p>
+			
+
+
+								</section>
+
 
 
 						</div>
@@ -189,6 +203,7 @@
 									</header>
 									<ul>
 										<li><a href="index.html">Introduce the programs</a></li>
+										<li><a href="schedule.html">Make a Schedule</a></li>
 										<li><a href="generic.html">Generic</a></li>
 										<li><a href="elements.html">Elements</a></li>
 										<li>
@@ -270,12 +285,18 @@
 
 			</div>
 
+
+			
+
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<!-- jQuery Modal -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 
 	</body>
 </html>
