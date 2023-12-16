@@ -2115,7 +2115,8 @@ button,
   display: -ms-flex;
   display: flex; }
   #banner h1 {
-    margin-top: -0.125em; }
+    margin-top: -0.125em; 
+    line-height: 3rem;}
   #banner .content {
     -moz-flex-grow: 1;
     -webkit-flex-grow: 1;
@@ -2271,3 +2272,9 @@ button,
     border-top: 0;
     margin-top: 0;
     padding-top: 0; }
+
+
+/* Contents */
+/* .features article .icon:after {
+  border: none;
+} */
