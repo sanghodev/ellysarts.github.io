@@ -2278,3 +2278,9 @@ button,
 /* .features article .icon:after {
   border: none;
 } */
+
+.gallery div {
+  padding: 0 0 0 0.4em;
+}
+
+
