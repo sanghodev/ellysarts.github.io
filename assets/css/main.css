@@ -2288,6 +2288,6 @@ button,
 }
 @media screen and (max-width: 480px) {
   .modal {
-    max-width: 99%; height: 99%;
-    padding: 15px 4px;
+    max-width: 99%; height: 99% !important;
+    padding: 15px 4px !important;
   } }
