@@ -2291,10 +2291,7 @@ button,
     max-width: 99%; height: 99% !important;
     padding: 15px 4px !important;
   }
-  .modal .gZDeSc > p {
-    line-height: 1em;
-    font-weight: normal;
-    font-size: 0.3rem !important;
-    text-align: left;
+  .blocker {
+    padding: 20px 0 !important;
   }
 }
