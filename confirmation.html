@@ -25,6 +25,14 @@
         gtag('config', 'G-2J6WNZZW1K');
     </script>
 
+    <!-- Frame Busting: Break out of iframe to show full confirmation page -->
+    <script>
+        // If page is loaded inside an iframe, redirect the parent window to this page
+        if (window.self !== window.top) {
+            window.top.location.href = window.location.href;
+        }
+    </script>
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Merriweather:wght@700&display=swap');
 
