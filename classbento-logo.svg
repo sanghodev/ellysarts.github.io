@@ -1,0 +1,7 @@
+<svg width="200" height="50" viewBox="0 0 200 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Heart Icon -->
+  <path d="M15 12C15 8.68629 17.6863 6 21 6C23.0503 6 24.8746 7.03153 26 8.60307C27.1254 7.03153 28.9497 6 31 6C34.3137 6 37 8.68629 37 12C37 13.3613 36.5978 14.6301 35.9076 15.6986C35.2174 16.7671 34.2391 17.6354 33.0609 18.2037L26 22L18.9391 18.2037C17.7609 17.6354 16.7826 16.7671 16.0924 15.6986C15.4022 14.6301 15 13.3613 15 12Z" fill="#A94276" transform="translate(-3, 10) scale(1.2)"/>
+  
+  <!-- ClassBento Text -->
+  <text x="48" y="32" font-family="Arial, sans-serif" font-size="20" font-weight="600" fill="#A94276">ClassBento</text>
+</svg>
