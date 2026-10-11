@@ -10,6 +10,13 @@ const ideas={'post-exam':'After the Exams','activity-day':'Make It an Activity D
 const plan=Object.hasOwn(planNames,params.get('plan'))?params.get('plan'):null,idea=Object.hasOwn(ideas,params.get('idea'))?params.get('idea'):null;
 const requested=params.get('visit')||'';
 if(/^2027-\d{2}-\d{2}$/.test(requested))field('preferred_visit_date').value=requested;
+const visitDate=field('preferred_visit_date'),returnDate=field('needed_by_date');
+let suggestedReturn='';
+const twoWeeksAfter=value=>{const date=new Date(value+'T12:00:00');date.setDate(date.getDate()+14);return [date.getFullYear(),String(date.getMonth()+1).padStart(2,'0'),String(date.getDate()).padStart(2,'0')].join('-');};
+function syncReturnDate(){const earliest=visitDate.value?twoWeeksAfter(visitDate.value):'';returnDate.min=earliest;returnDate.setCustomValidity('');if(earliest&&(!returnDate.value||returnDate.value===suggestedReturn||returnDate.value<earliest))returnDate.value=earliest;else if(!earliest&&returnDate.value===suggestedReturn)returnDate.value='';suggestedReturn=earliest;}
+function validateReturnDate(){returnDate.setCustomValidity(visitDate.value&&returnDate.value&&returnDate.value<twoWeeksAfter(visitDate.value)?'Please allow at least two weeks after your requested visit date for kiln firing and return delivery.':'');}
+syncReturnDate();visitDate.addEventListener('change',syncReturnDate);returnDate.addEventListener('input',validateReturnDate);
+form.addEventListener('reset',()=>{returnDate.min='';returnDate.setCustomValidity('');suggestedReturn='';});
 const readable=s=>new Date(s+'T12:00:00').toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'});
 if(field('preferred_visit_date').value)field('timing').value=readable(field('preferred_visit_date').value);
 if(plan)field('estimated_classes').value=classCounts[plan];
@@ -20,7 +27,7 @@ function showContext(){const selected=field('occasion_id').selectedOptions[0],pa
 if([...field('occasion_id').options].some(o=>o.value===params.get('occasion')))field('occasion_id').value=params.get('occasion');showContext();
 SchoolLocal.data().then(data=>{const select=field('occasion_id'),current=select.value;select.replaceChildren(new Option('Other / Not sure yet','other'));for(const event of data.events.filter(e=>e.visibility!=='archived'))select.add(new Option(event.name,event.id));if([...select.options].some(o=>o.value===current))select.value=current;showContext();}).catch(()=>{});
 for(const el of [field('preferred_visit_date'),field('occasion_id')])el.addEventListener('change',showContext);
-form.addEventListener('submit',async event=>{event.preventDefault();if(busy||!form.reportValidity())return;
+form.addEventListener('submit',async event=>{event.preventDefault();validateReturnDate();if(busy||!form.checkValidity()){if(!form.checkValidity())document.getElementById('request-more').open=true;form.reportValidity();return;}
 const localDate=field('preferred_visit_date').value,blocks=SchoolLocal.read().blocks||[];
 if(localDate&&([0,6].includes(new Date(localDate+'T12:00:00').getDay())||SchoolLocal.closedWeekday(localDate))){document.getElementById('request-more').open=true;status.textContent='Visiting classes are not available on this day. Choose an open weekday or leave the date blank so we can suggest one.';field('preferred_visit_date').focus();return;}
 if(localDate&&blocks.some(b=>b.date===localDate&&(b.status!=='hold'||b.expires>=nyDay()))){document.getElementById('request-more').open=true;status.textContent='This date is no longer available. Choose another requested date or leave it blank so we can suggest a schedule.';field('preferred_visit_date').focus();return;}
