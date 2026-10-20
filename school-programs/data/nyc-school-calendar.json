@@ -1,0 +1,170 @@
+{
+  "checkedAt": "2026-10-04",
+  "source": "https://www.schools.nyc.gov/calendar/2026-2027-school-year-calendar",
+  "coverageStart": "2027-01-01",
+  "coverageEnd": "2027-06-28",
+  "events": [
+    {
+      "start": "2027-01-01",
+      "end": "2027-01-01",
+      "title": "Winter break",
+      "type": "closed",
+      "scope": "All NYCPS"
+    },
+    {
+      "start": "2027-01-18",
+      "end": "2027-01-18",
+      "title": "Martin Luther King Jr. Day",
+      "type": "closed",
+      "scope": "All NYCPS"
+    },
+    {
+      "start": "2027-01-26",
+      "end": "2027-01-29",
+      "title": "Regents exams",
+      "type": "exam",
+      "scope": "High schools; confirm school schedule"
+    },
+    {
+      "start": "2027-02-01",
+      "end": "2027-02-01",
+      "title": "Staff development: no students",
+      "type": "partial",
+      "scope": "High schools and grades 6–12-only schools"
+    },
+    {
+      "start": "2027-02-02",
+      "end": "2027-02-02",
+      "title": "Spring semester starts",
+      "type": "school",
+      "scope": "All NYCPS"
+    },
+    {
+      "start": "2027-02-15",
+      "end": "2027-02-19",
+      "title": "Midwinter break",
+      "type": "closed",
+      "scope": "All NYCPS"
+    },
+    {
+      "start": "2027-03-03",
+      "end": "2027-03-03",
+      "title": "Conferences / 3-hour early dismissal",
+      "type": "conference",
+      "scope": "Elementary and Pre-K"
+    },
+    {
+      "start": "2027-03-04",
+      "end": "2027-03-04",
+      "title": "Conferences / 3-hour early dismissal",
+      "type": "conference",
+      "scope": "Middle schools and D75"
+    },
+    {
+      "start": "2027-03-09",
+      "end": "2027-03-09",
+      "title": "Eid al-Fitr",
+      "type": "closed",
+      "scope": "All NYCPS"
+    },
+    {
+      "start": "2027-03-18",
+      "end": "2027-03-18",
+      "title": "Evening conferences",
+      "type": "conference",
+      "scope": "High, K–12 and 6–12 schools"
+    },
+    {
+      "start": "2027-03-19",
+      "end": "2027-03-19",
+      "title": "Conferences / 3-hour early dismissal",
+      "type": "conference",
+      "scope": "High, K–12 and 6–12 schools"
+    },
+    {
+      "start": "2027-03-26",
+      "end": "2027-03-26",
+      "title": "Good Friday",
+      "type": "closed",
+      "scope": "All NYCPS"
+    },
+    {
+      "start": "2027-04-22",
+      "end": "2027-04-30",
+      "title": "Spring break",
+      "type": "closed",
+      "scope": "All NYCPS"
+    },
+    {
+      "start": "2027-05-12",
+      "end": "2027-05-12",
+      "title": "Evening conferences",
+      "type": "conference",
+      "scope": "High, K–12 and 6–12 schools"
+    },
+    {
+      "start": "2027-05-13",
+      "end": "2027-05-13",
+      "title": "Evening conferences",
+      "type": "conference",
+      "scope": "Middle schools and D75"
+    },
+    {
+      "start": "2027-05-17",
+      "end": "2027-05-17",
+      "title": "Eid al-Adha",
+      "type": "closed",
+      "scope": "All NYCPS"
+    },
+    {
+      "start": "2027-05-26",
+      "end": "2027-05-26",
+      "title": "Evening conferences",
+      "type": "conference",
+      "scope": "Elementary and Pre-K"
+    },
+    {
+      "start": "2027-05-31",
+      "end": "2027-05-31",
+      "title": "Memorial Day",
+      "type": "closed",
+      "scope": "All NYCPS"
+    },
+    {
+      "start": "2027-06-08",
+      "end": "2027-06-08",
+      "title": "Clerical day: no students",
+      "type": "partial",
+      "scope": "3-K, Pre-K, elementary, middle, K–12 and standalone D75; high/6–12 schools attend"
+    },
+    {
+      "start": "2027-06-10",
+      "end": "2027-06-10",
+      "title": "Staff conference day: no students",
+      "type": "closed",
+      "scope": "All NYCPS"
+    },
+    {
+      "start": "2027-06-15",
+      "end": "2027-06-18",
+      "title": "Regents exams",
+      "type": "exam",
+      "scope": "High schools; confirm school schedule"
+    },
+    {
+      "start": "2027-06-21",
+      "end": "2027-06-25",
+      "title": "Regents exams",
+      "type": "exam",
+      "scope": "High schools; confirm school schedule"
+    },
+    {
+      "start": "2027-06-28",
+      "end": "2027-06-28",
+      "title": "Last student day",
+      "type": "school",
+      "scope": "All NYCPS"
+    }
+  ],
+  "localEvents": []
+}
