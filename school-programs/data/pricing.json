@@ -1,0 +1,26 @@
+[
+  {
+    "id": "one",
+    "name": "One Class",
+    "minimum": 700,
+    "rate": 35,
+    "classes": 1,
+    "example": "25 students: $875"
+  },
+  {
+    "id": "two",
+    "name": "Two Classes",
+    "minimum": 1280,
+    "rate": 32,
+    "classes": 2,
+    "example": "50 students: $1,600"
+  },
+  {
+    "id": "three",
+    "name": "Three Classes",
+    "minimum": 1800,
+    "rate": 30,
+    "classes": 3,
+    "example": "75 students: $2,250"
+  }
+]

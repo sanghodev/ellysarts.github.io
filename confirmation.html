@@ -1,49 +1,268 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Elly's Arts & Crafts - Confirmation</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+<!doctype html>
+<html lang="en">
 
-		<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
-		<link rel="manifest" href="/images/site.webmanifest">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>Booking Confirmed | Elly's Arts & Crafts</title>
 
-		<!-- Google tag (gtag.js) Google ADs -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11468911017"></script>
-		<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
+    <!-- Google tag (gtag.js) Google ADs -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11468911017"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'AW-11468911017');
+    </script>
 
-		gtag('config', 'AW-11468911017');
-		</script>
-		<!-- Google tag (gtag.js) Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-2J6WNZZW1K"></script>
-		<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
+    <!-- Google tag (gtag.js) Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2J6WNZZW1K"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-2J6WNZZW1K');
+    </script>
 
-		gtag('config', 'G-2J6WNZZW1K');
-		</script>
+    <!-- Frame Busting: Try to break out of iframe -->
+    <script>
+        // If page is loaded inside an iframe, try to redirect parent window
+        try {
+            if (window.self !== window.top) {
+                window.top.location.href = window.location.href;
+            }
+        } catch (e) {
+            // Cross-origin - can't break out, page will display in embed mode
+            document.documentElement.classList.add('in-embed');
+        }
+    </script>
 
-		
-	</head>
-	<body>
-		<div id="main">
-			<div class="inner" style="text-align: center; padding: 0 3em 0.1em 3em;" >
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Merriweather:wght@700&display=swap');
 
-			   <h3 style="height: 50%; margin-top: 2rem; color: #f48eb0;">Thank you for choosing Elly's Arts & Crafts for your creative experience!</h3>
-			   <hr />
-			 	<h4 style="color: #333333; margin-bottom: 2rem;">Your booking has been received, and we're excited to welcome you. We'll send your confirmation email with all the details shortly. If you have any questions or need further assistance, please don't hesitate to contact us at <a href="mailto:ellysartscrafts@gmail.com">ellysartscrafts@gmail.com</a>. We look forward to helping you embark on your artistic journey!</h4>
-				
-				 <img src="images/cat.png" alt="Hello~" width="65%" style="max-width: 400px;"/>
-			</div>
-		</div>
+        * {
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fdf8f6;
+            color: #1c1917;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding: 20px;
+        }
 
-	</body>
+        /* Embed mode - more compact styling */
+        .in-embed body,
+        body.embed-mode {
+            min-height: auto;
+            padding: 15px;
+            background-color: white;
+        }
+
+        .container {
+            max-width: 768px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .card {
+            background-color: white;
+            padding: 2.5rem 2rem;
+            border-radius: 1.5rem;
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+            border: 1px solid #eaddd7;
+        }
+
+        /* Embed mode - no card shadow/border */
+        .in-embed .card {
+            box-shadow: none;
+            border: none;
+            padding: 1.5rem 1rem;
+            border-radius: 0;
+        }
+
+        h3 {
+            font-family: 'Merriweather', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #f48eb0;
+            margin: 0 0 1rem 0;
+            line-height: 1.3;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid #eaddd7;
+            margin: 1rem 0;
+        }
+
+        h4 {
+            color: #846358;
+            font-size: 0.95rem;
+            font-weight: 400;
+            line-height: 1.6;
+            margin: 0 0 1.5rem 0;
+        }
+
+        a {
+            color: #f48eb0;
+            text-decoration: underline;
+            font-weight: 700;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: #d46a8d;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .image-wrapper {
+            width: 50%;
+            max-width: 250px;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            transform: rotate(2deg);
+            transition: transform 0.5s;
+            overflow: hidden;
+        }
+
+        /* Show smaller image in embed mode */
+        .in-embed .image-wrapper,
+        .embed-mode .image-wrapper {
+            max-width: 150px;
+        }
+
+        .image-wrapper:hover {
+            transform: rotate(0deg);
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transform: scale(1.25);
+            transform-origin: top;
+            margin-top: -8px;
+        }
+
+        .buttons {
+            margin-top: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            align-items: center;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background-color: #a18072;
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 9999px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.2s;
+        }
+
+        .btn-primary:hover {
+            background-color: #846358;
+            color: white;
+        }
+
+        .btn-secondary {
+            display: inline-block;
+            background-color: transparent;
+            color: #a18072;
+            padding: 0.5rem 1.5rem;
+            border: 2px solid #a18072;
+            border-radius: 9999px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.875rem;
+            transition: all 0.2s;
+        }
+
+        .btn-secondary:hover {
+            background-color: #a18072;
+            color: white;
+        }
+
+        /* Responsive */
+        @media (min-width: 768px) {
+            .card {
+                padding: 3rem;
+            }
+
+            h3 {
+                font-size: 1.875rem;
+            }
+
+            h4 {
+                font-size: 1.1rem;
+            }
+
+            .image-wrapper {
+                max-width: 300px;
+            }
+
+            .buttons {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <h3>🎉 Thank you for choosing Elly's Arts & Crafts!</h3>
+            <hr />
+            <h4>
+                Your booking has been received! We'll send a confirmation email with all the details shortly.
+                <br /><br />
+                Questions? Contact us at
+                <a href="mailto:ellysartscrafts@gmail.com">ellysartscrafts@gmail.com</a>
+            </h4>
+
+            <div class="image-container">
+                <div class="image-wrapper">
+                    <img src="/cat_confirmation.jpg" alt="Hello~" />
+                </div>
+            </div>
+
+            <div class="buttons">
+                <a href="/" class="btn-primary" target="_top">
+                    Back to Home
+                </a>
+                <a href="/" class="btn-secondary" target="_top"
+                    onclick="window.open(window.location.href, '_blank'); return false;">
+                    Open Full Page
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Detect if in embed/iframe and add class
+        try {
+            if (window.self !== window.top) {
+                document.body.classList.add('embed-mode');
+            }
+        } catch (e) {
+            document.body.classList.add('embed-mode');
+        }
+    </script>
+</body>
+
 </html>

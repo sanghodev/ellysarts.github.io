@@ -1,0 +1,88 @@
+/* A persistent invitation using the school program's cream/rose palette. */
+#school-floating-entry {
+  position: fixed;
+  z-index: 40;
+  right: max(24px, env(safe-area-inset-right));
+  bottom: calc(24px + env(safe-area-inset-bottom));
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 312px;
+  min-height: 90px;
+  box-sizing: border-box;
+  padding: 15px 16px 15px 124px;
+  border: 1px solid #e7c8bb;
+  border-radius: 24px;
+  background: #fff5e9;
+  color: #442b25;
+  box-shadow: 0 8px 32px #24160f30, 0 2px 5px #24160f12;
+  font-family: Arial, sans-serif;
+  text-decoration: none;
+  text-align: left;
+  line-height: 1.2;
+  -webkit-tap-highlight-color: transparent;
+  transition: background-color .2s, box-shadow .2s, transform .2s;
+  animation: school-entry-arrive .5s ease-out both;
+}
+#school-floating-entry .school-floating-mascot {
+  position: absolute;
+  left: 0;
+  bottom: 4px;
+  width: 112px;
+  height: 112px;
+  max-width: none;
+  margin: 0;
+  object-fit: contain;
+  border: 0;
+  border-radius: 0;
+  pointer-events: none;
+  filter: drop-shadow(0 2px 1px #442b2518);
+}
+#school-floating-entry .school-floating-copy { display: block; flex: 1; min-width: 0; }
+#school-floating-entry .school-floating-invite {
+  display: block;
+  margin-bottom: 6px;
+  color: #80594d;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+#school-floating-entry .school-floating-title { display: block; font-size: 16px; font-weight: 700; line-height: 1.22; }
+#school-floating-entry .school-floating-arrow {
+  display: grid;
+  flex: 0 0 28px;
+  width: 28px;
+  height: 28px;
+  place-items: center;
+  border-radius: 50%;
+  background: #a7796d;
+  color: #fff;
+  font-size: 19px;
+  font-weight: 400;
+}
+#school-floating-entry:hover { background: #ffecdd; transform: translateY(-3px); box-shadow: 0 12px 34px #24160f40; }
+#school-floating-entry:focus-visible { outline: 3px solid #d5a092; outline-offset: 5px; }
+#school-floating-entry:active { transform: translateY(0); }
+body:has(dialog[open], [role="dialog"][aria-modal="true"], header svg.lucide-x) #school-floating-entry { visibility: hidden; }
+@keyframes school-entry-arrive { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+@media (max-width: 600px) {
+  #school-floating-entry {
+    right: max(14px, env(safe-area-inset-right));
+    bottom: calc(14px + env(safe-area-inset-bottom));
+    width: 264px;
+    min-height: 74px;
+    gap: 8px;
+    padding: 11px 12px 11px 100px;
+    border-radius: 20px;
+  }
+  #school-floating-entry .school-floating-mascot { width: 88px; height: 88px; left: -4px; bottom: 3px; }
+  #school-floating-entry .school-floating-invite { font-size: 10px; margin-bottom: 5px; }
+  #school-floating-entry .school-floating-title { font-size: 14px; }
+  #school-floating-entry .school-floating-arrow { flex-basis: 25px; width: 25px; height: 25px; font-size: 17px; }
+  body:has(input:focus, textarea:focus, select:focus) #school-floating-entry { visibility: hidden; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #school-floating-entry { animation: none; transition: none; }
+  #school-floating-entry:hover { transform: none; }
+}
